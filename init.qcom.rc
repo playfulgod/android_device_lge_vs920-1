@@ -20,9 +20,9 @@ on early-fs
 
     #mpt
     mkdir /mpt 0771 system system
-    wait /dev/block/mmcblk0p31
-    exec /system/bin/e2fsck -y /dev/block/mmcblk0p31
-    mount ext4 /dev/block/mmcblk0p31 /mpt nosuid nodev barrier=1 data=ordered
+    wait /dev/block/mmcblk0p29
+    exec /system/bin/e2fsck -y /dev/block/mmcblk0p29
+    mount ext4 /dev/block/mmcblk0p29 /mpt nosuid nodev barrier=1 data=ordered
 
    mkdir /tombstones 0771 system system
    mount ext4 /dev/block/mmcblk0p22 /tombstones nosuid nodev barrier=1
