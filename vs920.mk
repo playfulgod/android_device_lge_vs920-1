@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Init Scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.lge.usb.rc:root/init.lge.usb.rc \
+    $(LOCAL_PATH)/prebuilt/init.lge.usb.rc:root/init.lge.usb.rc \
     $(LOCAL_PATH)/prebuilt/boot_logo_00000.rle:root/bootimages/boot_logo_00000.rle \
     $(LOCAL_PATH)/prebuilt/init.qcom.sh:root/init.qcom.sh \
 	$(LOCAL_PATH)/prebuilt/init.lge.usb.sh:root/init.lge.usb.sh \

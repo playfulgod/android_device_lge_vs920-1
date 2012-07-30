@@ -76,4 +76,3 @@ case "$usb_config" in
     ;;
     * ) ;; #USB persist config exists, do nothing
 esac
-
