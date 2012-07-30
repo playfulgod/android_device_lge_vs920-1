@@ -24,6 +24,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 # Inits
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/init.rc:root/init.rc \
     $(LOCAL_PATH)/ueventd.rc:root/ueventd.rc \
 	$(LOCAL_PATH)/init.target.rc:root/init.target.rc \
 	$(LOCAL_PATH)/init.qcom.rc:root/init.qcom.rc
@@ -33,6 +34,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.lge.usb.rc:root/init.lge.usb.rc \
     $(LOCAL_PATH)/prebuilt/boot_logo_00000.rle:root/bootimages/boot_logo_00000.rle \
     $(LOCAL_PATH)/prebuilt/init.qcom.sh:root/init.qcom.sh \
+	$(LOCAL_PATH)/prebuilt/init.lge.usb.sh:root/init.lge.usb.sh \
     $(LOCAL_PATH)/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     $(LOCAL_PATH)/prebuilt/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
     $(LOCAL_PATH)/prebuilt/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh
