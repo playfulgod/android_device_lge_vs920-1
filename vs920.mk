@@ -32,7 +32,15 @@ PRODUCT_COPY_FILES += \
 # Init Scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/init.lge.usb.rc:root/init.lge.usb.rc \
-    $(LOCAL_PATH)/prebuilt/boot_logo_00000.rle:root/bootimages/boot_logo_00000.rle \
+	$(LOCAL_PATH)/prebuilt/boot_logo_00000.rle:root/bootimages/boot_logo_00000.rle \
+    $(LOCAL_PATH)/prebuilt/LGPowerOn_01.rle:root/bootimages/LGPowerOn_01.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_02.rle:root/bootimages/LGPowerOn_02.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_03.rle:root/bootimages/LGPowerOn_03.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_04.rle:root/bootimages/LGPowerOn_04.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_05.rle:root/bootimages/LGPowerOn_05.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_06.rle:root/bootimages/LGPowerOn_06.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_07.rle:root/bootimages/LGPowerOn_07.rle \
+	$(LOCAL_PATH)/prebuilt/LGPowerOn_08.rle:root/bootimages/LGPowerOn_08.rle \
     $(LOCAL_PATH)/prebuilt/init.qcom.sh:root/init.qcom.sh \
 	$(LOCAL_PATH)/prebuilt/init.lge.usb.sh:root/init.lge.usb.sh \
     $(LOCAL_PATH)/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
