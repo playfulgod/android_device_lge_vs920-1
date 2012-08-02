@@ -41,7 +41,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 #BOARD_TOUCH_RECOVERY := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/lge/vs920/recovery-gfx.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/lge/vs920/recovery/recovery-gfx.c
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_MMCUTILS := true
 

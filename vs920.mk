@@ -22,6 +22,10 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
+# Recovery
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
 # Inits
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/init.rc:root/init.rc \
