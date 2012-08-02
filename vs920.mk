@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Init Scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/init.lge.usb.rc:root/init.lge.usb.rc \
+    $(LOCAL_PATH)/init.lge.usb.rc:root/init.lge.usb.rc \
 	$(LOCAL_PATH)/prebuilt/boot_logo_00000.rle:root/bootimages/boot_logo_00000.rle \
     $(LOCAL_PATH)/prebuilt/LGPowerOn_01.rle:root/bootimages/LGPowerOn_01.rle \
 	$(LOCAL_PATH)/prebuilt/LGPowerOn_02.rle:root/bootimages/LGPowerOn_02.rle \
@@ -133,7 +133,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.fb.rgb565=0 \
     debug.sf.hw=1 \
     debug.enabletr=true \
-    debug.composition.type=dyn \
+    debug.composition.type=gpu \
     persist.sys.usb.config=mtp,adb \
     ro.opengles.version=131072 \
     com.qc.hardware=true \
