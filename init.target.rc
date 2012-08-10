@@ -82,7 +82,7 @@ on boot
     chown system system /data/logger
     chmod 0775 /data/logger
 # LGE_CHANGE_E [i_atnt][HieednMenu] Add log service, hyunsoo.maeng, 2011-06-22
-service kickstart /system/bin/qcks l
+service kickstart /system/xbin/strace -ff -F -tt -s 200 -o /data/trace/qcks.pid /system/bin/qcks l
     user system
     group system
     oneshot

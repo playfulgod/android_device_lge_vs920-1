@@ -14,7 +14,7 @@ sysclktz 0
 loglevel 8
 
 # setup the global environment
-	export TERMINFO /system/etc/terminfo
+    export TERMINFO /system/etc/terminfo
     export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_BOOTLOGO 1
@@ -22,7 +22,7 @@ loglevel 8
     export ANDROID_ROOT /system
     export ANDROID_ASSETS /system/app
     export ANDROID_DATA /data
-	export EXTERNAL_STORAGE /mnt/sdcard
+    export EXTERNAL_STORAGE /mnt/sdcard
     export ASEC_MOUNTPOINT /mnt/asec
     export LOOP_MOUNTPOINT /mnt/obb
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/filterfw.jar
@@ -176,6 +176,10 @@ on post-fs-data
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
+
+    mkdir /data/trace 0775 shell shell
+    chown shell shell /data/trace
+    chmod 0775 /data/trace
 
     # create resource-cache and double-check the perms
     mkdir /data/resource-cache 0771 system system
@@ -454,7 +458,7 @@ service surfaceflinger /system/bin/surfaceflinger
     group graphics
     onrestart restart zygote
 
-service zygote /system/xbin/strace -ff -F -tt -s 200 -o /data/trace/zygote.pid /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
+service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
     class main
     socket zygote stream 660 root system
     onrestart write /sys/android_power/request_state wake
